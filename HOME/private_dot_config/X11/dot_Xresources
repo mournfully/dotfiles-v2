@@ -1,9 +1,38 @@
-Xft.autohint: 1
 Xft.antialias: 1
-Xft.hinting: true
+Xft.hinting: 1
+Xft.autohint: 0
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
-
-Sxiv.background: #0b0e14
-Sxiv.foreground: #edeff1
+ 
+!st.font: JetBrainsMono-Regular:style:medium:pixelsize=21
+st.font: JetBrains Mono:style:medium:pixelsize=21
+ 
+! window padding
+! st.borderpx: 20
+ 
+!- 0.1 to 0.9 = transparency
+st.alpha: 1.0
+ 
+ 
+! Tokyonight colorscheme
+*background: #1a1b26
+*foreground: #c0caf5
+ 
+*color0: #1a1b26
+*color1: #f7768e
+*color2: #9ece6a
+*color3: #e0af68
+*color4: #7aa2f7
+*color5: #7aa2f7
+*color6: #7dcfff
+*color7: #a9b1d6
+ 
+*color8: #414868
+*color9: #f7768e
+*color10: #9ece6a
+*color11: #e0af68
+*color12: #7aa2f7
+*color13: #414868
+*color14: #7dcfff
+*color15: #c0caf5
