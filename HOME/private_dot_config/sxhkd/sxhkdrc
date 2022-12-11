@@ -1,0 +1,60 @@
+# ~/.config/sxhkd/sxhkdrc
+
+# reload sxhkd
+super + shift + Escape
+  pkill -USR1 -x sxhkd
+ 
+# unified copy & paste mapped to hyper with keyd
+super + ctrl + shift + alt + x
+    clipmenu
+
+super + ctrl + shift + alt + c
+    xclip -selection primary -o | xclip -selection clipboard -i
+
+super + ctrl + shift + alt + v
+    xclip -selection clipboard -o | xvkbd -delay 0 -xsendevent -file - 2>/dev/null
+ 
+# printscreen
+@Print
+  scrot --select -o -F 'screenshot.png' -e 'mv screenshot.png ~/Downloads/'
+
+# media controls
+XF86AudioRaiseVolume
+  pamixer -i 2
+
+XF86AudioLowerVolume
+  pamixer -d 2
+
+XF86AudioMute
+  pamixer -t
+
+XF86AudioPlay
+  playerctl play-pause # No players found ???
+
+# display brightness controls
+XF86MonBrightnessUp
+  xbacklight -inc 2 
+
+XF86MonBrightnessDown
+  xbacklight -dec 2
+ 
+# launcher
+super + space
+    dmenu_run -i 
+
+# terminal
+super + Return
+    start-alacritty.sh
+
+# browser
+super + shift + Return
+    $BROWSER --force-dark-mode --enable-features=WebUIDarkMode
+
+# editor
+super + shift + i
+    code-oss
+
+# wiki
+super + shift + o
+    exec $XDG_CONFIG_HOME/obsidian/Obsidian-1.0.0.AppImage
+
