@@ -1,5 +1,15 @@
 # basically a rip off of https://github.com/ericmurphyxyz/dotfiles/ lol
 
-installed 'zsh'
-copied most of ~/.bash_profile and ~/.bashrc and refactored aliases out into their own config file. Might need to import new fzf keybindings for zsh >.>
-will install 'zsh-completions' next
+I'd like to get:
+ - dunst
+ - lf/ueberzug
+ - polybar -> dwmblocks-async (in golang)
+ - rofi -> dmenu
+ - batsignal -> eric's battery notifications
+ - xbacklight -> brillo
+
+And perhaps, seperate branches for:
+ - terraform + ansible playbook  
+ - wallpapers 
+ - scripts submodule
+ - dwm submodule

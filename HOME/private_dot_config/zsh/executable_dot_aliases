@@ -21,7 +21,12 @@ alias code="vscodium"
 # personal aliases
 alias size="du -hs" 
 alias color="find-color-code.sh --no-preview --stdout" # also accepts flag: --rgb 
-alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias cdwm="sudo rm config.h && sudo make clean install"  # for dmenu as well
 alias ckeyd="sudo sv restart keyd && sleep 5 && xset r rate 200 25"
 
+# git related aliases
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gd="git diff"
+alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
