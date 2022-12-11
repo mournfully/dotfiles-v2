@@ -1,45 +1,62 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-
 env:
   TERM: xterm-256color
-  LANG: "en_US.UTF-8"
-  LC_CTYPE: en_US.UTF-8
 
-# Font configuration
+window:
+  padding:
+    x: 5
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 1
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    family: "monospace"
-    # The `style` can be specified to pick a specific face.
-    style: Regular
-  # Point size
-  size: 11.0
-# https://www.reddit.com/r/unixporn/comments/sd7mrv/oc_mountain_my_personal_colorscheme/ 
+    family: JetBrains Mono Nerd Font
+    style:  Medium
+  bold:
+    family: JetBrains Mono Nerd Font
+    style:  Bold
+  italic:
+    family: JetBrains Mono Nerd Font
+    style:  MediumItalic
+  bold_italic:
+    family: JetBrains Mono Nerd Font
+    style: BoldItalic
+  size: 7
+draw_bold_text_with_bright_colors: true
+
 colors:
-  # Default colors
   primary:
-    background: '0x101216'
-    foreground: '0xa7b5cd'
-
-  # Normal colors
+    background: "#11121D"
+    foreground: "#a9b1d6"
   normal:
-    black:   '0x232730'
-    red:     '0x973d46'
-    green:   '0x7ca25c'
-    yellow:  '0xe0ae4a'
-    blue:    '0x517ba5'
-    magenta: '0x94628a'
-    cyan:    '0x5f9f9e'
-    white:   '0xb4c0d4'
-
-  # Bright colors
+    black: "#32344a"
+    red: "#f7768e"
+    green: "#9ece6a"
+    yellow: "#e0af68"
+    blue: "#7aa2f7"
+    magenta: "#ad8ee6"
+    cyan: "#449dab"
+    white: "#787c99"
   bright:
-    black:   '0x232730'
-    red:     '0x973d46'
-    green:   '0x7ca25c'
-    yellow:  '0xe0ae4a'
-    blue:    '0x517ba5'
-    magenta: '0x94628a'
-    cyan:    '0x5f9f9e'
-    white:   '0xb4c0d4'
+    black: "#444b6a"
+    red: "#ff7a93"
+    green: "#b9f27c"
+    yellow: "#ff9e64"
+    blue: "#7da6ff"
+    magenta: "#bb9af7"
+    cyan: "#0db9d7"
+    white: "#acb0d0"
+
+selection:
+  save_to_clipboard: true
+
+shell:
+  program: /usr/bin/zsh
+
