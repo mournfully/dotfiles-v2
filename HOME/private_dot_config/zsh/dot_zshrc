@@ -17,7 +17,7 @@ setopt auto_menu # ...instead automatically list possible completions
 setopt complete_in_word # request completion from anywhere in word
 setopt always_to_end # move cursor to end of word after completion
 
-fpath=(/usr/share/zsh/plugins/zsh-completions/src $fpath)
+fpath=(/usr/share/zsh/site-functions/ $fpath)
 autoload -U compinit # force rebuild zcompdump cache for zsh-completions
 compinit
 zstyle ':completion:*' menu select
@@ -39,8 +39,7 @@ setopt share_history # share hist between zsh sessions
 
 
 
-# sudo xbps-install -S zsh zsh-autosuggestions zsh-syntax-highlighting
-# sudo git clone --depth 1 https://github.com/zsh-users/zsh-completions.git /usr/share/zsh/plugins/zsh-completions
+# sudo xbps-install -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 # sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh/plugins/powerlevel10k
 # ln -s /usr/share/zsh/plugins/* ~/.config/zsh/
 

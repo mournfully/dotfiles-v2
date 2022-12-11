@@ -18,7 +18,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # export WINIT_X11_SCALE_FACTOR=1.75 alacritty
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
-export LC_ALL=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 
 export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” 
 export CHROME_FLAGS=" --enable-features=WebUIDarkMode --force-dark-mode"
