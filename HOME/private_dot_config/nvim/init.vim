@@ -31,7 +31,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 " configure aesthetics
 set background=dark
-colorscheme tokyodaark
+colorscheme tokyodark
 syntax on
 " statusbar
 let g:lightline = {'colorscheme' : 'tokyonight'}
@@ -40,7 +40,7 @@ set laststatus=2
 set number 
 set relativenumber 
 set linebreak
-set spell spelllang=en_US
+set spell spelllang=en_ca
 
 " support true colour
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
