@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# aliases for standard commands 
+alias cp="cp -iv" # interactive and verbose
+alias mv="mv -iv" # ^
+alias rm="rm -vI" # verbose and less instrusive prompts
+alias df='df -h'  # less verbose
+alias grep='grep --color=auto'
+alias ls="ls -hN --color=auto --group-directories-first"
+alias wget="wget -c" # resume download if interupted
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" 
+alias tp="trash-put"
+alias tpr="trash-restore"
+ 
+# application based aliases
+alias v="$EDITOR"
+alias vim="$EDITOR"
+alias z="zathura"
+alias code="vscodium"
+
+# personal aliases
+alias size="du -hs" 
+alias color="find-color-code.sh --no-preview --stdout" # also accepts flag: --rgb 
+alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias cdwm="sudo rm config.h && sudo make clean install"  # for dmenu as well
+alias ckeyd="sudo sv restart keyd && sleep 5 && xset r rate 200 25"
+

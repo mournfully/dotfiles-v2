@@ -1,0 +1,36 @@
+# Set default apps
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="chromium"
+
+# Add ~/.local/bin and subfolders to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
+
+# Clean up $HOME directory
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export LESSHISTFILE="-"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export N_PREFIX="$HOME/.local/bin/n" # install node here
+export ZDOTDIR="$HOME/.config/zsh"
+
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export LC_ALL=en_US.UTF-8
+
+export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” # Subpixel hinting mode can be chosen by setting the right TrueType interpreter version.  
+export CHROME_FLAGS=" --enable-features=WebUIDarkMode --force-dark-mode"
+export QT_STYLE_OVERRIDE=kvantum
+export CM_SELECTION="clipboard"
+export WINIT_X11_SCALE_FACTOR=1.75 alacritty
+ 
+# XDG_RUNTIME_DIR env not set -- https://www.reddit.com/r/voidlinux/comments/m74p4g/xdg_runtime_dir_environment_variable/
+sudo mkdir -p /run/user/$(id -u)
+sudo chmod -R 700 /run/user/$(id -u)
+sudo chown -R 1000:1000 /run/user/$(id -u)
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
+
+# Perhaps we should look into 'lf'?
+
