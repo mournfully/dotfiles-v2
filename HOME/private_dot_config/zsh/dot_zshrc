@@ -1,7 +1,54 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt notify
-unsetopt beep
-# End of lines configured by zsh-newuser-install
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n] confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Automatically load POSIX aliases
+[ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && source "${XDG_CONFIG_HOME}/zsh/.aliases"
+
+unsetopt flowcontrol # don't automatically source shell startup config?
+setopt prompt_subst # perform complex calculations in prompts
+
+
+
+unsetopt menu_complete # on ambiguous completion, don't insert first match...
+setopt auto_menu # ...instead automatically list possible completions 
+setopt complete_in_word # request completion from anywhere in word
+setopt always_to_end # move cursor to end of word after completion
+
+fpath=(/usr/share/zsh/plugins/zsh-completions/src $fpath)
+autoload -U compinit # force rebuild zcompdump cache for zsh-completions
+compinit
+zstyle ':completion:*' menu select
+
+
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
+
+setopt append_history # all zsh sessions will append not overwrite to hist
+setopt extended_history # log timestamps and command durations per event
+setopt hist_expire_dups_first # trim oldest duplicate events first
+setopt hist_ignore_dups # ignore duplicate consecutive events
+setopt hist_ignore_space # ignore commands starting with a " "?
+setopt hist_verify # ask for confirmation before "$(!!)"
+setopt inc_append_history # append to hist after every command 
+setopt share_history # share hist between zsh sessions
+
+
+
+# sudo xbps-install -S zsh zsh-autosuggestions zsh-syntax-highlighting
+# sudo git clone --depth 1 https://github.com/zsh-users/zsh-completions.git /usr/share/zsh/plugins/zsh-completions
+# sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh/plugins/powerlevel10k
+# ln -s /usr/share/zsh/plugins/* ~/.config/zsh/
+
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
+# To customize: run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
