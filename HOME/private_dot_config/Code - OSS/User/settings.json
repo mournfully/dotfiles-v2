@@ -1,0 +1,37 @@
+{
+    "explorer.confirmDelete": false,
+    "keyboard.dispatch": "keyCode",
+    "editor.lineNumbers": "relative",
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace, Material Design Icons Desktop",
+    "editor.fontLigatures": true,
+    "go.gopath": "/home/local/.go/",
+    "explorer.confirmDragAndDrop": false,
+    "git.useEditorAsCommitInput": false,
+    "latex-workshop.linting.chktex.exec.path": "/opt/texlive/2022/bin/x86_64-linux/chktex",
+    // This allows magic comments
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    // Enable linting LaTeX with ChkTeX.
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.latexindent.path": "/opt/texlive/2022/bin/x86_64-linux/latexindent",
+    "workbench.editor.closeEmptyGroups": false,
+    "debug.toolBarLocation": "docked",
+    "terminal.integrated.defaultLocation": "editor",
+    "go.terminal.activateEnvironment": false,
+    "editor.wordWrap": "on",
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "diffEditor.wordWrap": "inherit",
+        "editor.wordWrapColumn": 100
+    },
+    "diffEditor.wordWrap": "on",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.sideBar.location": "right",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+    "workbench.iconTheme": "moxer-icons",
+    "redhat.telemetry.enabled": false,
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Serendipity Midnight",
+}
