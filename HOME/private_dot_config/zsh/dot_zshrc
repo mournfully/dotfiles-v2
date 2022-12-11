@@ -9,7 +9,7 @@ fi
 
 unsetopt flowcontrol # don't automatically source shell startup config?
 setopt prompt_subst # perform complex calculations in prompts
-
+bindkey -e # disable default vi keybindings
 
 
 unsetopt menu_complete # on ambiguous completion, don't insert first match...
