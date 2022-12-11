@@ -52,3 +52,9 @@ source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 # To customize: run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
+
+
+# the following was never reimplemented from ~/.bashrc
+# if [ $(tty) = /dev/tty1 ]; then startx exit 0; fi # start wm if tty is tty1
+# export $(dbus-launch)
+# eval "$(jump shell)" # https://github.com/gsamokovarov/jump

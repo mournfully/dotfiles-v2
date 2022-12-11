@@ -36,3 +36,11 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
  
 # Perhaps we should look into 'lf'?
 
+# The following was never reimplemented from ~/.bash_profile
+# export CM_DEBUG=0
+# export CM_OUTPUT_CLIP=0
+# export CM_MAX_CLIPS=20
+# export NO_AT_BRIDGE=1 # disable accessibity features
+# export PATH=/opt/texlive/2022/bin/x86_64-linux:$PATH
+# export PATH=$PATH:/usr/local/go/bin # golang runtime binaries
+# export PATH=$PATH:$GOPATH/bin # user binaries
