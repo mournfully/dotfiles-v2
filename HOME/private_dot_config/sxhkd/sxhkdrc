@@ -33,10 +33,10 @@ XF86AudioPlay
 
 # display brightness controls
 XF86MonBrightnessUp
-  xbacklight -inc 2 
+  change-brightness.sh up
 
 XF86MonBrightnessDown
-  xbacklight -dec 2
+  change-brightness.sh down
  
 # launcher
 super + space
