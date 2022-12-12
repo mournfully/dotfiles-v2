@@ -1,0 +1,3 @@
+[submodule "HOME/private_dot_config/dwm"]
+	path = HOME/private_dot_config/dwm
+	url = https://github.com/mournfully/dwm
