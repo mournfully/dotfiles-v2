@@ -22,12 +22,15 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME}/nvim/plugged"'))
   Plug 'mhinz/vim-startify' " fancy start screen
   Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' } " file explorer
   Plug 'matze/vim-move' " move lines around
+  Plug 'jdhao/better-escape.vim'
 call plug#end()
 
 " random bullshit, go!
-set clipboard=unnamed
+set clipboard=unnamedplus
 nnoremap <M-z> :set wrap!<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+let g:better_escape_shortcut = 'jk'
+let g:better_escape_interval = 150
 
 " configure aesthetics
 set background=dark
