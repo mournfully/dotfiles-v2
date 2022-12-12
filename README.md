@@ -10,11 +10,11 @@ I'd like to get:
 
 And perhaps, seperate branches for:
 - terraform + ansible playbook
-- wallpapers 
+- wallpapers
 - scripts submodule
 - dwm submodule
 
-Oh my goodness, I really should have run LaTeX from a fucking container and not on my host machine :sob: 
+Oh my goodness, I really should have run LaTeX from a fucking container and not on my host machine :sob:
 
 Ooh, I could also contianerize my golang dev environment
 
