@@ -1,41 +1,49 @@
-# Set default apps
+# set default apps
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="chromium"
 
-# Add ~/.local/bin and subfolders to $PATH
-export PATH="$PATH:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
+# add ~/.local/bin and subfolders to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}" 
 
-# Clean up $HOME directory
+# clean up $HOME directory
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export N_PREFIX="$HOME/.local/bin/n" # install node here
 export ZDOTDIR="$HOME/.config/zsh"
 
 # export WINIT_X11_SCALE_FACTOR=1.75 alacritty
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” 
-export CHROME_FLAGS=" --enable-features=WebUIDarkMode --force-dark-mode"
-export QT_STYLE_OVERRIDE=kvantum
-export CM_SELECTION="clipboard"
+# fzf
 export FZF_BASE="/usr/local/bin/fzf"
 export FZF_CTRL_T_COMMAND="fd --hidden --follow --exclude \".git\" . $HOME"
 export FZF_ALT_C_COMMAND="fd -t d --hidden --follow --exclude \".git\" . $HOME"
- 
+
+# golang 
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export PATH=$PATH:/usr/local/go/bin # system binaries
+export PATH=$PATH:$GOPATH/bin # local binaries
+
+export CHROME_FLAGS=" --enable-features=WebUIDarkMode --force-dark-mode"
+export QT_STYLE_OVERRIDE=kvantum
+export CM_SELECTION="clipboard"
+
 # XDG_RUNTIME_DIR env not set -- https://www.reddit.com/r/voidlinux/comments/m74p4g/xdg_runtime_dir_environment_variable/
-sudo mkdir -p /run/user/$(id -u)
-sudo chmod -R 700 /run/user/$(id -u)
-sudo chown -R 1000:1000 /run/user/$(id -u)
+if [[ ! -d "/run/user/$(id -u)" ]]; then
+	sudo mkdir -p /run/user/$(id -u)
+	sudo chmod -R 700 /run/user/$(id -u)
+	sudo chown -R 1000:1000 /run/user/$(id -u)
+fi
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
  
-# Perhaps we should look into 'lf'?
+# Perhaps we should look into `lf`?
 
 # The following was never reimplemented from ~/.bash_profile
 # export CM_DEBUG=0
@@ -43,5 +51,3 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 # export CM_MAX_CLIPS=20
 # export NO_AT_BRIDGE=1 # disable accessibity features
 # export PATH=/opt/texlive/2022/bin/x86_64-linux:$PATH
-# export PATH=$PATH:/usr/local/go/bin # golang runtime binaries
-# export PATH=$PATH:$GOPATH/bin # user binaries

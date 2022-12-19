@@ -7,6 +7,11 @@ fi
 # Automatically load POSIX aliases
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && source "${XDG_CONFIG_HOME}/zsh/.aliases"
 
+# This loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+
+xset r rate 200 25
 unsetopt flowcontrol # don't automatically source shell startup config?
 setopt prompt_subst # perform complex calculations in prompts
 bindkey -e # disable default vi keybindings
@@ -41,6 +46,7 @@ zstyle ':completion:*' menu select
 
 HISTSIZE=10000
 SAVEHIST=10000
+[ ! -d "~/.cache/zsh/" ] && mkdir -p ~/.cache/zsh/
 HISTFILE=~/.cache/zsh/history
 
 setopt append_history # all zsh sessions will append not overwrite to hist
@@ -64,11 +70,13 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 # To customize: run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
+[ -f "${XDG_CONFIG_HOME}/zsh/.p10k.zsh" ] && source "${XDG_CONFIG_HOME}/zsh/.p10k.zsh"
 
 
 # the following was never reimplemented from ~/.bashrc
 # if [ $(tty) = /dev/tty1 ]; then startx exit 0; fi # start wm if tty is tty1
 # export $(dbus-launch)
 # eval "$(jump shell)" # https://github.com/gsamokovarov/jump
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

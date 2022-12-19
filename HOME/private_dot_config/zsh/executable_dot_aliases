@@ -16,7 +16,7 @@ alias tpr="trash-restore"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias z="zathura"
-alias code="vscodium"
+alias code="code-oss"
 
 # personal aliases
 alias size="du -hs" 
