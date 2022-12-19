@@ -31,4 +31,8 @@
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
     },
+    {
+        "key": "ctrl+k ctrl+m",
+        "command": "workbench.action.openWorkspace"
+    },
 ]
