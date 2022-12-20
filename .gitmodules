@@ -4,3 +4,7 @@
 [submodule "HOME/private_dot_config/devour"]
 	path = HOME/private_dot_config/devour
 	url = https://github.com/salman-abedin/devour
+[submodule "HOME/private_dot_local/bin"]
+	path = HOME/private_dot_local/bin
+	url = https://github.com/mournfully/scripts
+	branch = window-manager
