@@ -1,4 +1,5 @@
-# basically a rip off of https://github.com/ericmurphyxyz/dotfiles/ lol
+# dotfiles for my laptop's void-linux install
+> basically a rip off of https://github.com/ericmurphyxyz/dotfiles/ lol
 
 I'd like to get:
 - dunst
