@@ -30,7 +30,6 @@
     "workbench.iconTheme": "moxer-icons",
     "redhat.telemetry.enabled": false,
     "workbench.colorTheme": "Tokyo Night",
-    "window.zoomLevel": -1,
     "go.gopath": "~/.local/share/go",
     "go.toolsManagement.autoUpdate": true,
     "code-runner.defaultLanguage": "go",
