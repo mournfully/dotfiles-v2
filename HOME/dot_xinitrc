@@ -1,0 +1,15 @@
+#!/bin/sh
+
+xrdb -load "${XDG_CONFIG_HOME}/X11/.Xresources"
+exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus & # why did i have to run ^ in my shell for playerctl daemon to work?
+batsignal -b & # warning alert at 15% and critical alert at 5%
+pipewire & 
+pipewire-pulse & 
+playerctld daemon &
+
+exec start-statusbar.sh & 
+exec undocked.sh & 
+
+sxhkd &
+clipmenud & 
+exec dwm

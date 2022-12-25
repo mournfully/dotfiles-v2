@@ -1,15 +1,16 @@
+if [ $(tty) = /dev/tty1 ]; then startx exit 0; fi # start wm if tty = tty1
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n] confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Automatically load POSIX aliases
-[ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && source "${XDG_CONFIG_HOME}/zsh/.aliases"
 
-# This loads nvm
+[ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && source "${XDG_CONFIG_HOME}/zsh/.aliases" # Automatically load POSIX aliases
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # nvm = node version manager
 
 xset r rate 200 25
 unsetopt flowcontrol # don't automatically source shell startup config?
@@ -74,7 +75,6 @@ source ~/.config/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # the following was never reimplemented from ~/.bashrc
-# if [ $(tty) = /dev/tty1 ]; then startx exit 0; fi # start wm if tty is tty1
 # export $(dbus-launch)
 # eval "$(jump shell)" # https://github.com/gsamokovarov/jump
 
