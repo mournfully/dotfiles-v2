@@ -52,7 +52,7 @@ super + shift + Return
 
 # editor
 super + shift + i
-    code-oss
+		code-oss 
 
 # wiki
 super + shift + o

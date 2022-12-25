@@ -8,9 +8,7 @@
     "explorer.confirmDragAndDrop": false,
     "git.useEditorAsCommitInput": false,
     "latex-workshop.linting.chktex.exec.path": "/opt/texlive/2022/bin/x86_64-linux/chktex",
-    // This allows magic comments
     "latex-workshop.latex.build.forceRecipeUsage": false,
-    // Enable linting LaTeX with ChkTeX.
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.latexindent.path": "/opt/texlive/2022/bin/x86_64-linux/latexindent",
     "workbench.editor.closeEmptyGroups": false,
@@ -32,9 +30,11 @@
     "workbench.colorTheme": "Tokyo Night",
     "go.gopath": "~/.local/share/go",
     "go.toolsManagement.autoUpdate": true,
-    "code-runner.defaultLanguage": "go",
-    "code-runner.enableAppInsights": false,
     "zenMode.fullScreen": false,
     "zenMode.centerLayout": false,
-    "code-runner.cwd": "/run/user/$(id -u)/",
+    "debug.inlineValues": "on",
+    "zenMode.hideTabs": false,
+    "telemetry.telemetryLevel": "off",
+    "window.zoomLevel": -1,
+    // "remote.SSH.useLocalServer": true,
 }
