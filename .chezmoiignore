@@ -1,3 +1,5 @@
+README.md
+
 {{- if eq .osid "linux-elementary" }}
 .xinitrc
 .vscode-oss
