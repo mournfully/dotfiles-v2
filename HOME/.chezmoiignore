@@ -1,0 +1,29 @@
+{{- if eq .osid "linux-elementary" }}
+.xinitrc
+.vscode-oss
+{{- end }}
+
+.config/devour
+.config/dwm
+
+{{- if eq .osid "linux-elementary" }}
+.config/X11
+.config/mimeapps.list
+.config/sxhkd
+.config/tmux
+{{- end }}
+
+.local/bin
+
+{{- if ne .osid "linux-elementary" }}
+.config/Code
+.config/Code/User
+.config/Code/User/settings.json
+.config/Code/User/keybindings.json
+{{- end }}
+{{- if ne .osid "linux-void" }}
+.config/Code - OSS
+.config/Code - OSS/User
+.config/Code - OSS/User/settings.json
+.config/Code - OSS/User/keybindings.json
+{{- end }}
