@@ -36,5 +36,5 @@
     "zenMode.hideTabs": false,
     "telemetry.telemetryLevel": "off",
     "window.zoomLevel": -1,
-    // "remote.SSH.useLocalServer": true,
+    // "remote.SSH.useLocalServer": true
 }

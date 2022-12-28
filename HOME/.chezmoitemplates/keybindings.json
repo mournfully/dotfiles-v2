@@ -3,12 +3,12 @@
     {
         "key": "alt+j",
         "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus"
     },
     {
         "key": "alt+k",
         "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+k ctrl+,",
@@ -70,5 +70,5 @@
     {
         "key": "ctrl+k ctrl+pageup",
         "command": "-workbench.action.previousEditorInGroup"
-    },
+    }
 ]

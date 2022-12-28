@@ -1,0 +1,21 @@
+{{ if eq .osid "linux-elementary" "linux-void" -}}
+
+{{ $extensions := list
+     "golang.go"
+     "equinusocio.moxer-icons"
+     "enkia.tokyo-night"
+     "redhat.vscode-yaml"
+     "redhat.ansible"
+     "github.codespaces"
+     "ms-vscode-remote.remote-containers"
+     "ms-vscode-remote.remote-ssh" -}}
+
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ range $extensions -}}
+code --force --install-extension {{ . }}
+{{ end -}}
+
+{{ end -}}
