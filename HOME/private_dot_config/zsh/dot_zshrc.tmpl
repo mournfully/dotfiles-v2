@@ -32,13 +32,16 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
-
 unsetopt menu_complete # on ambiguous completion, don't insert first match...
 setopt auto_menu # ...instead automatically list possible completions 
 setopt complete_in_word # request completion from anywhere in word
 setopt always_to_end # move cursor to end of word after completion
 
+{{ if eq .osid "linux-void" }}
 fpath=(/usr/share/zsh/site-functions/ $fpath)
+{{- else if eq .osid "linux-elementary" -}}
+fpath=( ~/.config/zsh/zsh-completions/src/ $fpath)
+{{- end }}
 autoload -U compinit # force rebuild zcompdump cache for zsh-completions
 compinit
 zstyle ':completion:*' menu select
@@ -62,8 +65,12 @@ setopt share_history # share hist between zsh sessions
 
 
 # sudo xbps-install -S zsh zsh-autosuggestions zsh-syntax-highlighting zsh-completions
-# sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh/plugins/powerlevel10k
 # ln -s /usr/share/zsh/plugins/* ~/.config/zsh/
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/powerlevel10k
+
+# git clone --depth=1 https://github.com/zsh-users/zsh-completions.git ~/.config/zsh/zsh-completions
+# git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/zsh-syntax-highlighting
+# git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zsh-autosuggestions
 
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh

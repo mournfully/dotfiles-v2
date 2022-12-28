@@ -7,6 +7,17 @@ alias rm="rm -vI" # verbose and less instrusive prompts
 alias df='df -h'  # less verbose
 alias grep='grep --color=auto'
 alias ls="ls -hN --color=auto --group-directories-first"
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+{{- if eq .osid "linux-elementary" }}
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+{{- end }}
+
 alias wget="wget -c" # resume download if interupted
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" 
 alias tp="trash-put"
@@ -16,13 +27,17 @@ alias tpr="trash-restore"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias z="zathura"
+{{ if eq .osid "linux-void" }}
 alias code="code-oss"
+{{- end }}
 
 # personal aliases
 alias size="du -hs" 
 alias color="find-color-code.sh --no-preview --stdout" # also accepts flag: --rgb 
+{{ if eq .osid "linux-void" }}
 alias cdwm="sudo rm config.h && sudo make clean install"  # for dmenu as well
 alias ckeyd="sudo sv restart keyd && sleep 5 && xset r rate 200 25"
+{{- end }}
 
 # git related aliases
 alias gs="git status"

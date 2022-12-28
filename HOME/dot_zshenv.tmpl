@@ -17,7 +17,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 
 # export WINIT_X11_SCALE_FACTOR=1.75 alacritty
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
-export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” 
+# export FREETYPE_PROPERTIES=“truetype:interpreter-version=38” 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
@@ -31,10 +31,13 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export PATH=$PATH:/usr/local/go/bin # system binaries
 export PATH=$PATH:$GOPATH/bin # local binaries
 
+{{- if eq .osid "linux-void" }}
 export CHROME_FLAGS=" --enable-features=WebUIDarkMode --force-dark-mode"
 export QT_STYLE_OVERRIDE=kvantum
 export CM_SELECTION="clipboard"
+{{- end }}
 
+{{- if eq .osid "linux-void" }}
 # XDG_RUNTIME_DIR env not set -- https://www.reddit.com/r/voidlinux/comments/m74p4g/xdg_runtime_dir_environment_variable/
 if [[ ! -d "/run/user/$(id -u)" ]]; then
 	sudo mkdir -p /run/user/$(id -u)
@@ -42,6 +45,7 @@ if [[ ! -d "/run/user/$(id -u)" ]]; then
 	sudo chown -R 1000:1000 /run/user/$(id -u)
 fi
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
+{{- end }}
  
 # Perhaps we should look into `lf`?
 
