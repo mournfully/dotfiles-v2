@@ -37,5 +37,6 @@
     "zenMode.hideTabs": false,
     "telemetry.telemetryLevel": "off",
     "window.zoomLevel": -1,
+    "security.workspace.trust.untrustedFiles": "open",
     // "remote.SSH.useLocalServer": true
 }

@@ -2,48 +2,48 @@
 
 These are my dotfiles managed with [`chezmoi`](https://github.com/twpayne/chezmoi).
 ```shell
-$ tree ~/.local/share/chezmoi
-├── HOME
-│   ├── dot_vscode-oss
-│   │   └── argv.json
-│   ├── dot_xinitrc
-│   ├── dot_zshenv.tmpl
-│   ├── private_dot_config
-│   │   ├── alacritty
-│   │   │   └── alacritty.yml.tmpl
-│   │   ├── dwm # submodule
-│   │   ├── mimeapps.list
-│   │   ├── nvim
-│   │   │   ├── init.vim.tmpl
-│   │   │   └── lua
-│   │   │       └── plugins.lua.tmpl
-│   │   ├── private_Code
-│   │   │   └── User
-│   │   │       ├── symlink_keybindings.json.tmpl
-│   │   │       └── symlink_settings.json.tmpl
-│   │   ├── private_Code - OSS
-│   │   │   └── User
-│   │   │       ├── symlink_keybindings.json.tmpl
-│   │   │       └── symlink_settings.json.tmpl
-│   │   ├── sxhkd
-│   │   │   └── sxhkdrc
-│   │   ├── tmux
-│   │   │   └── tmux.conf
-│   │   ├── wget
-│   │   │   └── wgetrc
-│   │   ├── X11
-│   │   │   └── dot_Xresources
-│   │   └── zsh
-│   │       ├── dot_keybindings
-│   │       ├── dot_p10k.zsh
-│   │       ├── dot_zshrc.tmpl
-│   │       └── executable_dot_aliases.tmpl
-│   └── private_dot_local
-│       └── bin 
-│           └── wm # submodule
+$ tree $(chezmoi source-path)
+/home/local/.local/share/chezmoi
+├── dot_vscode-oss
+│   └── argv.json
+├── dot_xinitrc
+├── dot_zshenv.tmpl
+├── private_dot_config
+│   ├── alacritty
+│   │   └── alacritty.yml.tmpl
+│   ├── dwm # <- git submodule
+│   ├── mimeapps.list
+│   ├── nvim
+│   │   ├── init.vim.tmpl
+│   │   └── lua
+│   │       └── plugins.lua.tmpl
+│   ├── private_Code
+│   │   └── User
+│   │       ├── symlink_keybindings.json.tmpl
+│   │       └── symlink_settings.json.tmpl
+│   ├── private_Code - OSS
+│   │   └── User
+│   │       ├── symlink_keybindings.json.tmpl
+│   │       └── symlink_settings.json.tmpl
+│   ├── sxhkd
+│   │   └── sxhkdrc
+│   ├── tmux
+│   │   └── tmux.conf
+│   ├── wget
+│   │   └── wgetrc
+│   ├── X11
+│   │   └── dot_Xresources
+│   └── zsh
+│       ├── dot_keybindings
+│       ├── dot_p10k.zsh
+│       ├── dot_zshrc.tmpl
+│       └── executable_dot_aliases.tmpl
+├── private_dot_local
+│   └── bin
+│       └── wm # <- git submodule
 └── README.md
 
-24 directories, 94 files
+23 directories, 94 files
 ```
 
 And here's a bunch of interesting stuff I'm considering doing with my dotfiles.
