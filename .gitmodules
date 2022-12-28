@@ -1,9 +1,6 @@
 [submodule "HOME/private_dot_config/dwm"]
 	path = private_dot_config/dwm
 	url = https://github.com/mournfully/dwm
-[submodule "HOME/private_dot_config/devour"]
-	path = HOME/private_dot_config/devour
-	url = https://github.com/salman-abedin/devour
 [submodule "HOME/private_dot_local/bin"]
 	path = private_dot_local/bin
 	url = https://github.com/mournfully/scripts
