@@ -38,6 +38,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :BLines<CR>
 nnoremap <C-g> :GFiles<CR>
 
+{{- if .nvimcoc }}
 " completions
 set updatetime=300 " reduce update delay
 set signcolumn=yes " always show column to not shift popup 
@@ -58,6 +59,7 @@ inoremap <silent><expr> <Tab>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
+{{- end }}
 
 function! s:DiffWithSaved()
   let filetype=&ft

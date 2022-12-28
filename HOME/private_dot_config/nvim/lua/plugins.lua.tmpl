@@ -17,7 +17,9 @@ return require('packer').startup(function(use)
   use 'tiagovla/tokyodark.nvim' -- theme
   use 'sheerun/vim-polyglot' -- comprehensive language packs
   use 'nvim-lualine/lualine.nvim' -- status bar
+{{- if .nvimcoc }}
   use { 'neoclide/coc.nvim', branch = 'release' } -- completions
+{{- end }}  
   use 'junegunn/fzf.vim' -- file search
   use 'mhinz/vim-startify' -- fancy start screen
   use 'matze/vim-move' -- move lines around
