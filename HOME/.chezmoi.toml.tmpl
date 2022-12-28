@@ -1,0 +1,9 @@
+{{/* define custom os id variable for linux, for example: "linux-debian" */}}
+{{- $osID := .chezmoi.os -}}
+{{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
+{{-   $osID = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
+
+[data]
+    osid = {{ $osID | quote }}
+    nvimcoc = false # coc(k) aka nvim languange server for code completions
