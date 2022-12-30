@@ -55,5 +55,5 @@ And here's a bunch of interesting stuff I'm considering doing with my dotfiles.
 - Speaking of containerization, I should really get into the habit of containerizing my dev environments.
 
 ### Credits
-https://github.com/ericmurphyxyz/dotfiles/
-https://github.com/twpayne/chezmoi
+- https://github.com/ericmurphyxyz/dotfiles/ for their gorgeous zsh dotfiles
+- https://github.com/twpayne/dotfiles for their highly sophisticated chezmoi setup, which I still reference all the time
