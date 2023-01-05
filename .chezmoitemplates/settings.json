@@ -36,7 +36,11 @@
     "debug.inlineValues": "on",
     "zenMode.hideTabs": false,
     "telemetry.telemetryLevel": "off",
-    "window.zoomLevel": -1,
     "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "git.ignoreMissingGitWarning": true,
+    "window.zoomLevel": -1,
+    "files.simpleDialog.enable": true
     // "remote.SSH.useLocalServer": true
 }
