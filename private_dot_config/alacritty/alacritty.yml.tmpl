@@ -35,7 +35,12 @@ font:
   bold_italic:
     family: {{ $alacritty_font }}
     style: BoldItalic
-  size: 7
+{{- if eq .osid "linux-elementary" }}
+    size: 12
+{{- else if eq .osid "linux-void" }}
+    size: 7
+{{- end }}
+
 draw_bold_text_with_bright_colors: true
 
 colors:

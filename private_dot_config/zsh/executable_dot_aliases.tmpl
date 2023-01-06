@@ -27,21 +27,41 @@ alias tpr="trash-restore"
 alias v="$EDITOR"
 alias vim="$EDITOR"
 alias z="zathura"
-{{ if eq .osid "linux-void" }}
+{{- if eq .osid "linux-void" }}
 alias code="code-oss"
 {{- end }}
 
 # personal aliases
 alias size="du -hs" 
+{{- if eq .osid "linux-void" }}
 alias color="find-color-code.sh --no-preview --stdout" # also accepts flag: --rgb 
-{{ if eq .osid "linux-void" }}
 alias cdwm="sudo rm config.h && sudo make clean install"  # for dmenu as well
 alias ckeyd="sudo sv restart keyd && sleep 5 && xset r rate 200 25"
 {{- end }}
 
 # git related aliases
+# see https://github.com/ericmurphyxyz/dotfiles/blob/master/.config/shell/aliases
+alias g="git"
 alias gs="git status"
-alias ga="git add"
 alias gc="git commit"
+alias gca="git commit --amend"
+alias ga="git add"
+alias gpl="git pull"
+alias gpom="git pull origin master"
+alias gp="git push"
+alias gpuom="git push origin master"
 alias gd="git diff"
+alias gch="git checkout"
+alias gnb="git checkout -b"
+alias gac="git add . && git commit"
+alias grs="git restore --staged ."
+alias gre="git restore"
+alias gr="git remote"
+alias gcl="git clone"
 alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gl="git log --oneline"
+alias gt="git ls-tree -r master --name-only"
+alias grm="git remote"
+alias gb="git branch"
+alias gf="git fetch"
+
